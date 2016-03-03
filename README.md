@@ -1,14 +1,24 @@
-# Report
+# Reporting Using Jasperreports Library
 
-This is example to generate PDF report from jasper jrxml template.
+A sample application to fetch jasper report content in pdf format.
 
-Emplyoee_Details.jrxml : template for report
+## Template for report
+Emplyoee_Details.jrxml -- src/main/webapp/WEB-INF/jasperreports/
 
-dto --> Employee, EmployeeBeanList, ReportDataSource: Data for fill up the report, we can take data from Database as well
+## DTO
+- Employee
+- EmployeeBeanList
+- ReportDataSource: Data source to fill the report.
 
-BaseController  --> Controller having end point to fetch the pdf
+## Controller
+BaseController -- Controller to get the report.
 
-Deploy the war file from target to tomcat Webapp folder.
-To see the report, see the following URL, pdf will get downloaded
+## Deployment
+Deploy the war file present under /target.
+Server Used -- Tomcat
 
-<http://localhost:8080/Report/EmployeeDetails/>
+## Test URL
+http://localhost:8080/Report/EmployeeDetails/
+
+## Output
+Sample report in pdf format
