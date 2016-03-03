@@ -18,6 +18,16 @@
     <field name="emailId" class="java.lang.String">
         <fieldDescription><![CDATA[emailId]]></fieldDescription>
     </field>
+    <field name="noOfStocks" class="java.lang.Integer">
+        <fieldDescription><![CDATA[noOfStocks]]></fieldDescription>
+    </field>
+    <variable name="countNumber" class="java.lang.Integer"
+              calculation="Count">
+        <variableExpression>
+            <![CDATA[Boolean.TRUE]]>
+        </variableExpression>
+    </variable>
+
     <title>
         <band height="70">
             <line>
@@ -118,4 +128,32 @@
             </textField>
         </band>
     </detail>
+    <summary>
+        <band height="400" splitType="Stretch">
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="135" y="0" width="270" height="300"/>
+                    <chartTitle>
+                        <titleExpression>
+                            <![CDATA["Employee Stocks Pie Chart"]]>
+                        </titleExpression>
+                    </chartTitle>
+                </chart>
+                <pieDataset>
+                    <dataset incrementType="None"/>
+                    <keyExpression>
+                        <![CDATA[$F{name}]]>
+                    </keyExpression>
+                    <valueExpression>
+                        <![CDATA[$F{noOfStocks}]]>
+                    </valueExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+        </band>
+    </summary>
+
 </jasperReport>
