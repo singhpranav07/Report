@@ -20,6 +20,7 @@ public class BaseController {
     public String welcome(ModelMap model) {
 
         model.addAttribute("message", "Welcome");
+
         model.addAttribute("counter", ++counter);
         logger.debug("[welcome] counter : {}", counter);
 
