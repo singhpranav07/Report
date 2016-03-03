@@ -15,7 +15,7 @@ BaseController -- Controller to get the report.
 
 ## Deployment
 Deploy the war file present under /target.
-Server Used -- Tomcat
+### Server Used -- Tomcat
 
 ## Test URL
 http://localhost:8080/Report/EmployeeDetails/
